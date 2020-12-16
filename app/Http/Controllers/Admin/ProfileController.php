@@ -1,5 +1,15 @@
 <?php
 
+/*「http://XXXXXX.jp/XXX というアクセスが来たときに、 AAAControllerのbbbというAction に渡すRoutingの設定」を書いてみてください。
+
+Route::group(['prefix'=>'XXX'], function(){
+	Route::get('XXX', 'AAAController@bbb');
+});
+
+
+Route::get('XXX', 'AAAController@bbb');
+
+*/
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
