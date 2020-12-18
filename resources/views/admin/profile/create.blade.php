@@ -16,7 +16,7 @@
 @extends('layouts.profile')
 
 
-{{-- profile.blade.phpの@yield('title')に'プロフィール作成'を埋め込む --}}
+{{-- profile.blade.phpの@yield('title')に'ぷろふぃ'を埋め込む --}}
 @section('title', 'プロフィール作成')
 
 {{-- profile.blade.phpの@yield('content')に以下のタグを埋め込む --}}
