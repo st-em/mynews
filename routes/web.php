@@ -34,3 +34,16 @@ Route::group(['prefix' => 'admin'], function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+//13章：追記
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+     Route::get('news/create', 'Admin\NewsController@add');
+     Route::post('news/create', 'Admin\NewsController@create'); # 追記
+});
+
+//13章：課題
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+    Route::post('profile/edit', 'Admin\ProfileController@update');
+     Route::post('profile/create', 'Admin\ProfileController@create'); 
+});
