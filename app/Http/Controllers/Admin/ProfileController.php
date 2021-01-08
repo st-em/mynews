@@ -18,6 +18,7 @@ use App\Http\Controllers\Controller;
 
 // use App\Profile;
 
+use App\Profile;
 use App\History2;
 use Carbon\Carbon;
 
@@ -49,7 +50,7 @@ use Carbon\Carbon;
 */
 
 
-use App\Profile;
+use App\Profiles;
 class ProfileController extends Controller{
     public function add()
   {
