@@ -19,7 +19,7 @@ use App\Http\Controllers\Controller;
 // use App\Profile;
 
 use App\Profile;
-use App\History2;
+use App\Kadai17;
 use Carbon\Carbon;
 
 /*class ProfileController extends Controller
@@ -50,7 +50,7 @@ use Carbon\Carbon;
 */
 
 
-use App\Profiles;
+use App\Profile2;
 class ProfileController extends Controller{
     public function add()
   {
@@ -128,11 +128,12 @@ public function index(Request $request)
         $profile->fill($profile_form)->save();
 
         // 以下を追記
-        $history = new History;
-        $history->profile_id = $profile->id;
-        $history->edited_at = Carbon::now();
-        $history->save();
+        $kadai17 = new Kadai17;
+        $kadai17->profile_id = $profile->id;
+        $kadai17->edited_at = Carbon::now();
+        $kadai17->save();
 
         return redirect('admin/profile/');
+    
 }
 }

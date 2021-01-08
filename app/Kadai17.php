@@ -4,17 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Profile extends Model
+class Kadai17 extends Model
 {
-    //
     protected $guarded = array('id');
 
-    // 以下を追記
     public static $rules = array(
-        'name' => 'required',
-        'gender' => 'required',
-        'introduction' => 'required',
-        'hobby' => 'required',
+        'profile_id' => 'required',
+        'edited_at' => 'required',
     );
     
     // 以下を追記
@@ -23,4 +19,5 @@ class Profile extends Model
     {
       return $this->hasMany('App\Kadai17');
     }
+
 }
