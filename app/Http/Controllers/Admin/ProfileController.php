@@ -50,7 +50,7 @@ use Carbon\Carbon;
 */
 
 
-use App\Profile2;
+// use App\Profile2;
 class ProfileController extends Controller{
     public function add()
   {
@@ -64,14 +64,7 @@ class ProfileController extends Controller{
      $profile = new Profile;
      $form = $request->all();
       
-      // フォームから画像が送信されてきたら、保存して、$profiles->image_path に画像のパスを保存する
-     /* if (isset($form['image'])) {
-        $path = $request->file('image')->store('public/image');
-        $profiles->image_path = basename($path);
-      } else {
-          $profiles->image_path = null;
-      }
-      */
+     
       
       // フォームから送信されてきた_tokenを削除する
       unset($form['_token']);
@@ -85,7 +78,7 @@ class ProfileController extends Controller{
             return redirect('admin/profile/create');
   }
 
-public function index(Request $request)
+/*public function index(Request $request)
 
 {
       $cond_name = $request->cond_name;
@@ -97,7 +90,7 @@ public function index(Request $request)
       return view('admin.profile.index', ['posts' => $posts, 'cond_name' => $cond_name]);
   }
 
-
+*/
 
   public function edit(Request $request)
   {
@@ -133,7 +126,7 @@ public function index(Request $request)
         $kadai17->edited_at = Carbon::now();
         $kadai17->save();
 
-        return redirect('admin/profile/');
+        return redirect('admin/profile/create');
     
 }
 
