@@ -19,7 +19,7 @@ class Profile extends Model
     
     // 以下を追記
     // News Modelに関連付けを行う
-    public function kadai17()
+    public function kadai17s()
     {
       return $this->hasMany('App\Kadai17');
     }

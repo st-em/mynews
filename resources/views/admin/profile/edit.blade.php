@@ -38,8 +38,7 @@
                         <div class="col-md-10">
                             <textarea class="form-control" name="introduction" rows="20">{{ $profile_form->body }}</textarea>
                         </div>
-                    </div>
-                    </div>
+                    
                     </div>
                     <div class="form-group row">
                         <div class="col-md-10">
@@ -54,7 +53,7 @@
                     <div class="col-md-4 mx-auto">
                         <h2>編集履歴</h2>
                         <ul class="list-group">
-                            @if ($profile_form->kadai17s!= NULL)
+                            @if ($profile_form->kadai17s != NULL)
                                 @foreach ($profile_form->kadai17s as $kadai17)
                                     <li class="list-group-item">{{ $kadai17->edited_at }}</li>
                                 @endforeach
