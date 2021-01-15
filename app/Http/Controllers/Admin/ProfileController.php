@@ -122,7 +122,7 @@ class ProfileController extends Controller{
 
         // 以下を追記
         $kadai17 = new Kadai17;
-        $kadai17->profile_id = $profile->id;
+        $kadai17->id = $profile->id;
         $kadai17->edited_at = Carbon::now();
         $kadai17->save();
 

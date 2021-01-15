@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateKadai17sTable extends Migration
+class CreateKadai18sTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateKadai17sTable extends Migration
      */
      public function up()
     {
-        Schema::create('kadai17s', function (Blueprint $table) {
+        Schema::create('kadai18s', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name'); // 名前を保存するカラム
             $table->string('gender');  // 性別を保存するカラム
@@ -26,6 +26,6 @@ class CreateKadai17sTable extends Migration
    
     public function down()
     {
-        Schema::dropIfExists('kadai17s');
+        Schema::dropIfExists('kadai18s');
     }
 }
