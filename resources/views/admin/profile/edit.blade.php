@@ -53,9 +53,9 @@
                     <div class="col-md-4 mx-auto">
                         <h2>編集履歴</h2>
                         <ul class="list-group">
-                            @if ($profile_form->kadai17s != NULL)
-                                @foreach ($profile_form->kadai17s as $kadai17)
-                                    <li class="list-group-item">{{ $kadai17->edited_at }}</li>
+                            @if ($profile_form->records != NULL)
+                                @foreach ($profile_form->records as $record)
+                                    <li class="list-group-item">{{ $record->edited_at }}</li>
                                 @endforeach
                             @endif
                         </ul>

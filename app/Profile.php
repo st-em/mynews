@@ -8,6 +8,7 @@ class Profile extends Model
 {
     //
     protected $guarded = array('id');
+    protected $table = 'records';
 
     // 以下を追記
     public static $rules = array(
@@ -19,8 +20,8 @@ class Profile extends Model
     
     // 以下を追記
     // News Modelに関連付けを行う
-    public function kadai17s()
+    public function records()
     {
-      return $this->hasMany('App\Kadai17');
+      return $this->hasMany('App\Record');
     }
 }

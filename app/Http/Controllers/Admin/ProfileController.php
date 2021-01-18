@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 // use App\Profile;
 
 use App\Profile;
-use App\Kadai17;
+use App\Record;
 use Carbon\Carbon;
 
 
@@ -61,12 +61,12 @@ class ProfileController extends Controller{
         $profile->fill($profile_form)->save();
 
         // 以下を追記
-        $kadai17 = new Kadai17;
-        $kadai17->id = $profile->id;
-        $kadai17->created_at = Carbon::now();
-        $kadai17->save();
+        $record = new Record;
+        $record->profile_id = $profile->id;
+        $record->edited_at = Carbon::now();
+        $record->save();
 
-        return redirect('admin/profile/create');
+        return redirect('admin/profile/');
     
 }
 
