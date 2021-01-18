@@ -66,7 +66,7 @@ class ProfileController extends Controller{
         $record->edited_at = Carbon::now();
         $record->save();
 
-        return redirect('admin/profile/');
+        return redirect('admin/profile/create');
     
 }
 
