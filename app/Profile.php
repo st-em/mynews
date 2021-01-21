@@ -12,16 +12,14 @@ class Profile extends Model
 
     // 以下を追記
     public static $rules = array(
-        'name' => 'required',
-        'gender' => 'required',
-        'introduction' => 'required',
-        'hobby' => 'required',
+        'profile_id' => 'required',
+        'edited_at' => 'required'
     );
     
     // 以下を追記
     // News Modelに関連付けを行う
-    public function records()
-    {
-      return $this->hasMany('App\Record');
-    }
+    // public function records()
+    // {
+    //  return $this->hasMany('App\Record');
+   //  }
 }
